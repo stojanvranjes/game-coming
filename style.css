@@ -1,0 +1,95 @@
+body {
+    background-image: url("images/game.png");
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+}
+.red {
+    color:red;
+}
+
+.blok1 {
+    text-align: center;
+    color:#FFF;
+    padding-top: 163px;
+    margin-bottom: 60px;
+}
+.blok1 .line-height {
+    line-height: 0%;
+}
+.blok1 .naslov {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.blok3 {
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 40px;
+}
+.blok4 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.blok4 .form-control {
+    border-radius: 0px;
+    margin-right: 10px;
+    width:330px;
+}
+.blok4 .btn {
+    border-radius: 0px;
+    background-color: #bb1818;
+    color:#FFFFFF;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-color: #bb1818;
+}
+.blok5 .social {
+    text-align: center;
+    font-size: 35px;
+    letter-spacing: 5px;
+}
+.blok5 .social a:link,
+.blok5 .social a:visited {
+    color:#b2b2b2;
+}
+.blok5 .social a:hover {
+    color:#bb1818;
+}
+.blok5 .social a:active {
+    color: #FFFF00;
+}
+.blok6 {
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 360px;
+    margin-bottom: 46px;
+}
+
+@media screen and (max-width:767px){
+    .blok4 {
+        text-align: left;
+    }
+    .row.timer>div {
+        border:none !important;
+    }
+}
+
+@media screen and (max-width:573px) {
+    .blok4 .form-control {
+        width:auto;
+    }
+    .blok4 {
+        text-align: left;
+    }
+}
+
+.row.timer {
+    color: white;
+    font-size: 48px;
+    margin-bottom: 80px;
+}
+
+.row.timer>div {
+    border-left: solid thin white;
+    border-right: solid thin white;
+}

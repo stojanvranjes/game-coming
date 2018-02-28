@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gaming Coming</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+<main>
+    <div class="container blok1">
+        <div class="row">
+            <div class="col-md-12">
+                <p>PREMIUM ECOMMERCE THEME</p>
+                <h1 class="line-height"><strong>GAMING<span class="red">STORE</span></strong></h1>
+                <h1 class="naslov">We are currently working on awesome<br>
+                    new site. Stay tuned!</h1>
+                <p>Phasellus egestas, nunc non consectetur hendrerit, risus mauris cursus velit,
+                    et condimentum nisi enim in eros. Nam<br> ullamcorper neque non erat elementum vulputate.
+                    Nullam dignissim lobortis interdum.</p>
+
+            </div>
+        </div>
+    </div>
+    <div class="container blok2">
+        <div class="row timer">
+            <div class="col-sm-3">
+                <div id="days-container" class="text-center"></div>
+                <h5 class="text-center">Days</h5>
+            </div>
+            <div class="col-sm-3">
+                <div id="hours-container" class="text-center"></div>
+                <h5 class="text-center">Hours</h5>
+            </div>
+            <div class="col-sm-3">
+                <div id="minutes-container" class="text-center"></div>
+                <h5 class="text-center">Minutes</h5>
+            </div>
+            <div class="col-sm-3">
+                <div id="remaining-seconds-container" class="text-center"></div>
+                <h5 class="text-center">Seconds</h5>
+            </div>
+        </div>
+        <script>
+            var upgradeTime = 2592001;
+            var seconds = upgradeTime;
+            function timer() {
+                var days        = Math.floor(seconds/24/60/60);
+                var hoursLeft   = Math.floor((seconds) - (days*86400));
+                var hours       = Math.floor(hoursLeft/3600);
+                var minutesLeft = Math.floor((hoursLeft) - (hours*3600));
+                var minutes     = Math.floor(minutesLeft/60);
+                var remainingSeconds = seconds % 60;
+                if (remainingSeconds < 10) {
+                    remainingSeconds = "0" + remainingSeconds;
+                }
+                var daysContainer = document.getElementById('days-container');
+                var hoursContainer = document.getElementById('hours-container');
+                var minutesContainer = document.getElementById('minutes-container');
+                var remainingSecondsContainer = document.getElementById('remaining-seconds-container');
+
+                daysContainer.innerHTML = days+"";
+                hoursContainer.innerHTML = hours+"";
+                minutesContainer.innerHTML = minutes+"";
+                remainingSecondsContainer.innerHTML = remainingSeconds+"";
+
+                // document.getElementById('countdown').innerHTML ="<span>|</span>" + days + " <span>|</span>"
+                //     + hours + " <span>|</span>" + minutes +
+                //     " <span>|</span>" + remainingSeconds + " <span>|</span>";
+                if (seconds == 0) {
+                    clearInterval(countdownTimer);
+                    document.getElementById('countdown').innerHTML = "Completed";
+                } else {
+                    seconds--;
+                }
+            }
+            var countdownTimer = setInterval('timer()', 1000);
+        </script>
+    </div>
+    <div class="container blok3">
+        <div class="row">
+            <div class="col-md-12">
+                <p><strong>SIGN UP FOR NEWSLETTER</strong></p>
+                <p>Phasellus egestas, nunc non consectetur hendrerit, risus mauris cursus velit, et condimentum</p>
+            </div>
+        </div>
+    </div>
+    <div class="container blok4">
+        <div class="row">
+            <div class="col-md-12">
+                <form class="form-inline">
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="mail" placeholder="Eneter your email addrees">
+                    </div>
+                    <button type="submit" class="btn btn-default">SUBSCRIBE</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container blok5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 social">
+                    <a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-google-plus-official" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-wifi" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container blok6">
+        <div class="row">
+            <div class="col-md-12">
+                <p>COPYRIGHT &copy;  2014 WORDPRESS. ALL RIGHTS RESERVED. CREDITS<span class="red">8THEME</span></p>
+            </div>
+        </div>
+    </div>
+
+</main>
+</body>
+</html>
